@@ -12,12 +12,19 @@ Manual install: download `vX.Y.Z/nudge.mmu` and upload it in **Settings → Firm
 
 ## Layout
 
+One folder per board, each with its own versions and its own `latest.txt`:
+
 | Path | Purpose |
 |---|---|
-| `latest.txt` | Latest version number and package size, read by the panel |
-| `vX.Y.Z/nudge.mmu` | Signed and encrypted firmware package for that version |
+| `<board>/latest.txt` | Latest version number and package size for that board |
+| `<board>/vX.Y.Z/nudge.mmu` | Signed and encrypted package for that board and version |
 
-Every version is also tagged `vX.Y.Z`.
+Boards published so far: `esp32`. A board only ever reads its own folder, so the same version
+number can mean different firmware on different boards, and a package can never be installed on
+the wrong one. Releases are tagged `<board>-vX.Y.Z`.
+
+The `latest.txt` in the root and the `vX.Y.Z` folders that may sit next to it are a leftover for
+boards running an older firmware that does not know about the per-board layout yet.
 
 ## Security
 
