@@ -1,4 +1,4 @@
-version=1.0.7
-size=1772254
+version=1.0.8
+size=1772462
 chip.esp32=nudge-esp32.mmu
-size.esp32=1772254
+size.esp32=1772462
