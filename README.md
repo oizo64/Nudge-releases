@@ -8,7 +8,7 @@ The source code is kept in a private repository. This repository only holds the 
 
 Open the board's web panel and go to **Settings**. Your browser checks this repository and shows **Install X.Y.Z** when a newer version exists. It downloads the package and sends it to the board, which verifies and installs it.
 
-Manual install: download the package for your board - `<board>/vX.Y.Z/nudge.mmu`, for example `esp32/v1.1.0/nudge.mmu` - and upload it in **Settings → Firmware update**. The board reads the chip id from the image header, so a package built for a different board is refused instead of bricking it.
+Manual install: download the package for your board - `<board>/vX.Y.Z/nudge.mmu`, for example the newest folder under `esp32/` - and upload it in **Settings → Firmware update**. The board reads the chip id from the image header, so a package built for a different board is refused instead of bricking it.
 
 ## Layout
 
