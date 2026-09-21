@@ -1,6 +1,6 @@
 # Nudge releases
 
-Firmware packages for **Nudge**, an ESP32 board that acts as a Bluetooth mouse and gently nudges the cursor so connected computers stay awake.
+Firmware packages for **Nudge**, an ESP32 or ESP32-C3 board that acts as a Bluetooth mouse and gently nudges the cursor so connected computers stay awake.
 
 The source code is kept in a private repository. This repository only holds the released firmware.
 
@@ -8,7 +8,7 @@ The source code is kept in a private repository. This repository only holds the 
 
 Open the board's web panel and go to **Settings**. Your browser checks this repository and shows **Install X.Y.Z** when a newer version exists. It downloads the package and sends it to the board, which verifies and installs it.
 
-Manual install: download `vX.Y.Z/nudge.mmu` and upload it in **Settings → Firmware update**.
+Manual install: download the package for your board - `<board>/vX.Y.Z/nudge.mmu`, for example `esp32/v1.1.0/nudge.mmu` - and upload it in **Settings → Firmware update**. The board reads the chip id from the image header, so a package built for a different board is refused instead of bricking it.
 
 ## Layout
 
@@ -19,9 +19,9 @@ One folder per board, each with its own versions and its own `latest.txt`:
 | `<board>/latest.txt` | Latest version number and package size for that board |
 | `<board>/vX.Y.Z/nudge.mmu` | Signed and encrypted package for that board and version |
 
-Boards published so far: `esp32`. A board only ever reads its own folder, so the same version
-number can mean different firmware on different boards, and a package can never be installed on
-the wrong one. Releases are tagged `<board>-vX.Y.Z`.
+Boards published so far: `esp32` and `esp32c3`. A board only ever reads its own folder, so the same
+version number can mean different firmware on different boards, and a package can never be installed
+on the wrong one. Releases are tagged `<board>-vX.Y.Z`.
 
 The `latest.txt` in the root and the `vX.Y.Z` folders that may sit next to it are a leftover for
 boards running an older firmware that does not know about the per-board layout yet.
