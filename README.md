@@ -23,9 +23,6 @@ Boards published so far: `esp32` and `esp32c3`. A board only ever reads its own 
 version number can mean different firmware on different boards, and a package can never be installed
 on the wrong one. Releases are tagged `<board>-vX.Y.Z`.
 
-The `latest.txt` in the root and the `vX.Y.Z` folders that may sit next to it are a leftover for
-boards running an older firmware that does not know about the per-board layout yet.
-
 ## Security
 
 Every package is signed with a private RSA key that never leaves the author's computer. A board verifies the signature before it switches to the new firmware and rejects anything else, so a modified or foreign package cannot be installed. The firmware image is also encrypted.
