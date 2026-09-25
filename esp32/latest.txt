@@ -1,2 +1,2 @@
-version=1.1.1
-size=1807246
+version=1.2.0
+size=1824990
